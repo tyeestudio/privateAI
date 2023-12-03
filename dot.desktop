@@ -1,0 +1,8 @@
+# client startup
+# ~/.config/autostart/.desktop
+
+[Desktop Entry]  
+Type=Application  
+Name=Client   
+Exec=/usr/bin/google-chrome --incognito http://127.0.0.1:8099/chat  
+Terminal=false  
