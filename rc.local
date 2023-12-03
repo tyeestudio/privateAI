@@ -1,0 +1,12 @@
+### enable rc-local at boot time
+### sudo systemctl enable rc-local
+### sudo systemctl status rc-local
+
+### start ai-inference server
+source ~/venv/bin/activate
+python3 -m ai/ai_cpp.server --host 0.0.0.0 --port 8000 --model ai.cpp/models/7b/ai-7b.gguf --n_gpu_layers 35
+
+### start ai-frontend server
+nohup python service/agent.py > /dev/null &
+
+
