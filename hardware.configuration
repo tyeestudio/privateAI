@@ -1,5 +1,10 @@
 ### installing the NVIDIA drivers
 ### automatic hardware detection,  and install the driver for the hardware
 
-sudo ubuntu-drivers install
+## https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ubuntu
+sudo apt-get install nvidia-kernel-open-520
+sudo apt-get install cuda-drivers-520
+
+### automatic hardware detection,  and install the driver for the hardware
+#sudo ubuntu-drivers install
 sudo reboot now
