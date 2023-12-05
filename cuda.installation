@@ -3,11 +3,28 @@
 sudo apt update
 sudo apt install gcc
 
-### update keyring
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
-sudo dpkg -i cuda-keyring_1.0-1_all.deb
+## Verify You Have a CUDA-Capable GPU
+lspci | grep -i nvidia
+### Verify You Have a Supported Version of Linux
+uname -m && cat /etc/*release
 
+#Prepare Ubuntu
+sudo apt-get install linux-headers-$(uname -r)
+sudo apt-key del 7fa2af80
+
+#Full GDS support is restricted to the following Linux distros:
+#Ubuntu 20.04, Ubuntu 22.04
+
+
+### update keyring
+wget https://developer.download.nvidia.com/compute/cuda/repos/$distro/$arch/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+
+sudo apt-get update
 ### install nvidia toolkits
-sudo apt-get -y install cuda
+sudo apt-get install cuda-toolkit
+sudo apt-get install nvidia-gds
+
 
 sudo reboot now
+
