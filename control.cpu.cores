@@ -1,0 +1,4 @@
+### 
+### example of control cpus used for python
+taskset --cpu-list 0-3 python app.py
+numactrl -C 0-3 python app.py  
