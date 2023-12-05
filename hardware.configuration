@@ -1,3 +1,5 @@
 ### installing the NVIDIA drivers
 ### automatic hardware detection,  and install the driver for the hardware
+
 sudo ubuntu-drivers install
+sudo reboot now
