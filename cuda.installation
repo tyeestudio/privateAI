@@ -1,0 +1,7 @@
+# Install CUDA on Ubuntu 22.04
+
+sudo apt update
+sudo apt install gcc
+sudo apt-get -y install cuda
+
+sudo reboot now
